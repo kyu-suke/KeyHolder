@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043B54D7236E75D400888847 /* KeyHolder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FAEB711D13EB25008A6D6E /* KeyHolder.framework */; };
+		043B54D8236E75D400888847 /* KeyHolder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31FAEB711D13EB25008A6D6E /* KeyHolder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		312C0FC51D13AA0300973348 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C0FC41D13AA0300973348 /* AppDelegate.swift */; };
 		312C0FC71D13AA0300973348 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 312C0FC61D13AA0300973348 /* Assets.xcassets */; };
 		312C0FCA1D13AA0300973348 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 312C0FC81D13AA0300973348 /* MainMenu.xib */; };
-		31FAEB771D13EB85008A6D6E /* KeyHolder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FAEB711D13EB25008A6D6E /* KeyHolder.framework */; };
-		31FAEB781D13EB85008A6D6E /* KeyHolder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31FAEB711D13EB25008A6D6E /* KeyHolder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		312C10021D13AA9700973348 /* Embed Frameworks */ = {
+		043B54D9236E75D400888847 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				31FAEB781D13EB85008A6D6E /* KeyHolder.framework in Embed Frameworks */,
+				043B54D8236E75D400888847 /* KeyHolder.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31FAEB771D13EB85008A6D6E /* KeyHolder.framework in Frameworks */,
+				043B54D7236E75D400888847 /* KeyHolder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 				312C0FBD1D13AA0300973348 /* Sources */,
 				312C0FBE1D13AA0300973348 /* Frameworks */,
 				312C0FBF1D13AA0300973348 /* Resources */,
-				312C10021D13AA9700973348 /* Embed Frameworks */,
+				043B54D9236E75D400888847 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,7 +341,6 @@
 		312C0FCF1D13AA0300973348 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -355,7 +354,6 @@
 		312C0FD01D13AA0300973348 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Example/Info.plist;
