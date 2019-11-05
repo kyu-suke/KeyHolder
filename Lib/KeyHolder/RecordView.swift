@@ -113,6 +113,11 @@ public protocol RecordViewDelegate: class {
         clearButton.target = self
         clearButton.action = #selector(RecordView.clearAndEndRecording)
         addSubview(clearButton)
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
+            self.keyDown(with: $0)
+            return $0
+        }
+
     }
 
     // MARK: - Draw
@@ -161,7 +166,6 @@ public protocol RecordViewDelegate: class {
         let width = bounds.width - minX - (marginX * 2) - clearSize
         if width <= 0 { return }
         // TODO kVK_JIS_Eisu kVK_JIS_Kana
-        print("hoge")
         let characters: String
         switch keyCombo.keyCode {
         case kVK_JIS_Eisu:
