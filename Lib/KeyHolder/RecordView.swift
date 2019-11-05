@@ -113,6 +113,11 @@ public protocol RecordViewDelegate: class {
         clearButton.target = self
         clearButton.action = #selector(RecordView.clearAndEndRecording)
         addSubview(clearButton)
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
+            self.keyDown(with: $0)
+            return $0
+        }
+
     }
 
     // MARK: - Draw
@@ -160,7 +165,17 @@ public protocol RecordViewDelegate: class {
         let minX = (fontSize * 4) + (marginX * 2)
         let width = bounds.width - minX - (marginX * 2) - clearSize
         if width <= 0 { return }
-        let text = (keyCombo.doubledModifiers) ? "double tap" : keyCombo.characters
+        // TODO kVK_JIS_Eisu kVK_JIS_Kana
+        let characters: String
+        switch keyCombo.keyCode {
+        case kVK_JIS_Eisu:
+            characters = "英数"
+        case kVK_JIS_Kana:
+            characters = "かな"
+        default:
+            characters = keyCombo.characters
+        }
+        let text = (keyCombo.doubledModifiers) ? "double tap" : characters
         text.draw(in: NSRect(x: minX, y: marginY, width: width, height: bounds.height), withAttributes: keyCodeTextAttributes())
     }
 
