@@ -13,6 +13,8 @@ import Carbon
 import Magnet
 import Sauce
 
+// test hoge
+
 public protocol RecordViewDelegate: AnyObject {
     func recordViewShouldBeginRecording(_ recordView: RecordView) -> Bool
     func recordView(_ recordView: RecordView, canRecordKeyCombo keyCombo: KeyCombo) -> Bool
